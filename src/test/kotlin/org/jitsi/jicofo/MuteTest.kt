@@ -54,12 +54,12 @@ class MuteTest : JicofoHarnessTest() {
         context("When the muter is an owner") {
             muter.chatMember.role = MemberRole.OWNER
             mute() shouldBe SUCCESS
-            unmute() shouldBe NOT_ALLOWED
+            unmute() shouldBe SUCCESS
         }
         context("When the muter is a moderator") {
             muter.chatMember.role = MemberRole.MODERATOR
             mute() shouldBe SUCCESS
-            unmute() shouldBe NOT_ALLOWED
+            unmute() shouldBe SUCCESS
         }
         context("When the muter is a guest") {
             muter.chatMember.role = MemberRole.GUEST
